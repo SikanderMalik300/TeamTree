@@ -1,0 +1,12 @@
+.background-image {
+    background-image: url('../images/bgmain.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
