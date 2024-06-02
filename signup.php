@@ -8,7 +8,7 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $phone = $_POST['phoneno'];
+    $phoneno = $_POST['phoneno'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Insert user into database
         $query = "INSERT INTO users (username, email, phoneno, password) 
-                  VALUES ('$username', '$email', '$phone', '$hashed_password')";
+                  VALUES ('$username', '$email', '$phoneno', '$hashed_password')";
         if (mysqli_query($conn, $query)) {
             header("Location: login.php");
             exit();
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Donation System</title>
+    <title>Sign Up - TeamTree</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="email" id="email" name="email" required>
             
             <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" required>
+            <input type="text" id="phoneno" name="phoneno" required>
             
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
